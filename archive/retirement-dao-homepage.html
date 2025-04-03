@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement DAO - Decentralized Retirement Solutions</title>
+    <style>
+        :root {
+            --primary-color: #008f6e;
+            --secondary-color: #195759;
+            --accent-color: #4b3b7c;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --gradient-primary: linear-gradient(135deg, #008f6e 0%, #195759 100%);
+            --gradient-secondary: linear-gradient(135deg, #195759 0%, #4b3b7c 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .auth-buttons {
+            display: flex;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+            margin-right: 10px;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .hero {
+            padding: 80px 0;
+            background: var(--gradient-secondary);
+            color: white;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary-color);
+            border: none;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #666;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .feature-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .feature-card p {
+            color: #666;
+        }
+        
+        .plans {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .plan-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .plan-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .plan-header {
+            padding: 20px;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+        }
+        
+        .plan-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .plan-features {
+            padding: 30px;
+        }
+        
+        .plan-features ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .plan-features li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .plan-features li::before {
+            content: "✓";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .btn-full {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .how-it-works {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .step p {
+            color: #666;
+        }
+        
+        .step:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            top: 25px;
+            right: -20px;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .cta {
+            padding: 80px 0;
+            background: var(--gradient-secondary);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .step:not(:last-child)::after {
+                display: none;
+            }
+            
+            .steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="/api/placeholder/40/40" alt="Retirement DAO Logo">
+                    <span>Retirement DAO</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#plans">Plans</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#docs">Docs</a></li>
+                </ul>
+                
+                <div class="auth-buttons">
+                    <a href="#login" class="btn btn-outline">Log In</a>
+                    <a href="#signup" class="btn btn-primary">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Your Decentralized Future. Your Retirement.</h1>
+            <p>Retirement DAO offers secure, transparent, and community-governed retirement savings with the power of blockchain technology.</p>
+            <div class="hero-buttons">
+                <a href="#create-wallet" class="btn btn-secondary">Create Wallet</a>
+                <a href="#start-planning" class="btn btn-primary">Start Planning Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Retirement DAO</h2>
+                <p>A new approach to retirement planning that leverages the best of DeFi, community governance, and blockchain technology.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/30/30" alt="Shield icon">
+                    </div>
+                    <h3>Secure & Transparent</h3>
+                    <p>Your funds are secured by smart contracts on the blockchain with complete transparency and auditability.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/30/30" alt="Chart icon">
+                    </div>
+                    <h3>Optimized Yields</h3>
+                    <p>Our automated strategies leverage staking, DeFi lending, and real-world assets for optimal returns.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/30/30" alt="People icon">
+                    </div>
+                    <h3>Community Governance</h3>
+                    <p>As a DAO member, you have a say in investment strategies and platform development.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/30/30" alt="Wallet icon">
+                    </div>
+                    <h3>Flexible Withdrawals</h3>
+                    <p>Access your funds on your terms with instant or scheduled withdrawal options.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/30/30" alt="Dashboard icon">
+                    </div>
+                    <h3>Real-time Dashboard</h3>
+                    <p>Monitor your portfolio performance, yields, and projected retirement income in real-time.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="/api/placeholder/30/30" alt="Lock icon">
+                    </div>
+                    <h3>Self-Custody Options</h3>
+                    <p>Maintain control of your assets with our secure, user-controlled wallets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="plans" class="plans">
+        <div class="container">
+            <div class="section-title">
+                <h2>Choose Your Plan</h2>
+                <p>Customize your retirement strategy based on your risk tolerance, group size, and savings goals.</p>
+            </div>
+            
+            <div class="plan-cards">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Low Risk</h3>
+                        <div class="plan-price">3-7% APY</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>Stablecoins (USDT, USDC)</li>
+                            <li>Lending Protocols (Aave, Compound)</li>
+                            <li>Staking (Ethereum, Lido)</li>
+                            <li>Low volatility</li>
+                            <li>Steady growth</li>
+                        </ul>
+                        <a href="#customize-plan" class="btn btn-primary btn-full">Select Plan</a>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Medium Risk</h3>
+                        <div class="plan-price">5-12% APY</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>Tokenized Bonds & Stocks</li>
+                            <li>Real Estate Investments</li>
+                            <li>RWA Platforms</li>
+                            <li>Moderate exposure</li>
+                            <li>Real-world value</li>
+                        </ul>
+                        <a href="#customize-plan" class="btn btn-primary btn-full">Select Plan</a>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Medium-High Risk</h3>
+                        <div class="plan-price">10-20% APY</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>DeFi Pulse Index (DPI)</li>
+                            <li>Metaverse Index (MVI)</li>
+                            <li>Crypto Hedge Funds</li>
+                            <li>Higher returns</li>
+                            <li>Managed DeFi exposure</li>
+                        </ul>
+                        <a href="#customize-plan" class="btn btn-primary btn-full">Select Plan</a>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3>Personalized</h3>
+                        <div class="plan-price">Custom Strategy</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li>Custom risk level</li>
+                            <li>Personalized group size</li>
+                            <li>Target interest rate</li>
+                            <li>Expected retirement amount</li>
+                            <li>Flexible allocation</li>
+                        </ul>
+                        <a href="#customize-plan" class="btn btn-primary btn-full">Customize Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Getting started with Retirement DAO is simple and secure.</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Visit & Sign Up</h3>
+                    <p>Create an account on the Retirement DAO platform with your email and secure password.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Connect Wallet</h3>
+                    <p>Connect your existing crypto wallet or create a new custodial wallet directly on our platform.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Fund Your Account</h3>
+                    <p>Deposit funds into your Retirement DAO account to start growing your retirement savings.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Manage & Grow</h3>
+                    <p>Use the dashboard to track performance, participate in governance, and optimize your strategy.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Withdraw Flexibly</h3>
+                    <p>Access your funds with flexible withdrawal options when you're ready for retirement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <h2>Start Planning Your Future Today</h2>
+            <p>Join thousands of users who are already growing their retirement savings with Retirement DAO.</p>
+            <a href="#signup" class="btn btn-secondary">Create Your Wallet</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">Retirement DAO</div>
+                    <p>A decentralized retirement solution powered by blockchain technology and governed by its community.</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="/api/placeholder/20/20" alt="Twitter"></a>
+                        <a href="#"><img src="/api/placeholder/20/20" alt="Discord"></a>
+                        <a href="#"><img src="/api/placeholder/20/20" alt="Telegram"></a>
+                        <a href="#"><img src="/api/placeholder/20/20" alt="Medium"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Plans</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Governance</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Governance Forum</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Telegram</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Retirement DAO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

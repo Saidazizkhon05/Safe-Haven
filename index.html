@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Haven - Decentralized Retirement Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fa-solid fa-vault fa-lg"></i>
+                    <span>Safe Haven</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#plans">Plans</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+                
+                <div class="auth-buttons">
+                    <a href="#login" class="btn btn-outline">Log In</a>
+                    <a href="#signup" class="btn btn-primary">Sign Up</a>
+                </div>
+                
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeIn">
+                <h1>Decentralized Retirement. <span class="highlight">Your Future, Secured.</span></h1>
+                <p>Safe Haven offers secure, transparent, and community-governed retirement savings with the power of blockchain technology and DeFi yields.</p>
+                <div class="hero-buttons">
+                    <a href="#create-wallet" class="btn btn-secondary animate__animated animate__fadeInUp">Create Wallet</a>
+                    <a href="#start-planning" class="btn btn-primary animate__animated animate__fadeInUp animate__delay-1s">Start Planning Now</a>
+                </div>
+            </div>
+            <div class="hero-image animate__animated animate__fadeInRight animate__delay-1s">
+                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=3432&auto=format&fit=crop" alt="DeFi Retirement" class="rounded-img">
+            </div>
+        </div>
+        <div class="stats-bar">
+            <div class="container">
+                <div class="stat-item">
+                    <span class="stat-number" id="users-count">14,500+</span>
+                    <span class="stat-label">Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="tvl">$87M+</span>
+                    <span class="stat-label">Total Value Locked</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="avg-apy">7.8%</span>
+                    <span class="stat-label">Average APY</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="protocols">12+</span>
+                    <span class="stat-label">DeFi Protocols</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title animate__animated animate__fadeIn">
+                <h2>Why Choose Safe Haven</h2>
+                <p>A new approach to retirement planning that leverages the best of DeFi, community governance, and blockchain technology.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card animate__animated animate__fadeInUp">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Secure & Transparent</h3>
+                    <p>Your funds are secured by smart contracts on the blockchain with complete transparency and auditability.</p>
+                </div>
+                
+                <div class="feature-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>Optimized Yields</h3>
+                    <p>Our automated strategies leverage staking, DeFi lending, and real-world assets for optimal returns.</p>
+                </div>
+                
+                <div class="feature-card animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3>Community Governance</h3>
+                    <p>As a DAO member, you have a say in investment strategies and platform development.</p>
+                </div>
+                
+                <div class="feature-card animate__animated animate__fadeInUp">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <h3>Flexible Withdrawals</h3>
+                    <p>Access your funds on your terms with instant or scheduled withdrawal options when you reach retirement.</p>
+                </div>
+                
+                <div class="feature-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-dashboard"></i>
+                    </div>
+                    <h3>Real-time Dashboard</h3>
+                    <p>Monitor your portfolio performance, yields, and projected retirement income in real-time.</p>
+                </div>
+                
+                <div class="feature-card animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <h3>Self-Custody Options</h3>
+                    <p>Maintain control of your assets with our secure, user-controlled wallets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="plans" class="plans">
+        <div class="container">
+            <div class="section-title animate__animated animate__fadeIn">
+                <h2>Choose Your Plan</h2>
+                <p>Customize your retirement strategy based on your risk tolerance, group size, and savings goals.</p>
+            </div>
+            
+            <div class="plan-cards">
+                <div class="plan-card animate__animated animate__fadeInUp">
+                    <div class="plan-header">
+                        <h3>Low Risk</h3>
+                        <div class="plan-price">3-7% APY</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Stablecoins (USDT, USDC)</li>
+                            <li><i class="fa-solid fa-check"></i> Lending Protocols (Aave, Compound)</li>
+                            <li><i class="fa-solid fa-check"></i> Staking (Ethereum, Lido)</li>
+                            <li><i class="fa-solid fa-check"></i> Low volatility</li>
+                            <li><i class="fa-solid fa-check"></i> Steady growth</li>
+                        </ul>
+                        <a href="#customize-plan" class="btn btn-primary btn-full">Select Plan</a>
+                    </div>
+                </div>
+                
+                <div class="plan-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="plan-header">
+                        <h3>Medium Risk</h3>
+                        <div class="plan-price">5-12% APY</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Tokenized Bonds & Stocks</li>
+                            <li><i class="fa-solid fa-check"></i> Real Estate Investments</li>
+                            <li><i class="fa-solid fa-check"></i> RWA Platforms</li>
+                            <li><i class="fa-solid fa-check"></i> Moderate exposure</li>
+                            <li><i class="fa-solid fa-check"></i> Real-world value</li>
+                        </ul>
+                        <a href="#customize-plan" class="btn btn-primary btn-full">Select Plan</a>
+                    </div>
+                </div>
+                
+                <div class="plan-card animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="plan-header">
+                        <h3>Medium-High Risk</h3>
+                        <div class="plan-price">10-20% APY</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> DeFi Pulse Index (DPI)</li>
+                            <li><i class="fa-solid fa-check"></i> Metaverse Index (MVI)</li>
+                            <li><i class="fa-solid fa-check"></i> Crypto Hedge Funds</li>
+                            <li><i class="fa-solid fa-check"></i> Higher returns</li>
+                            <li><i class="fa-solid fa-check"></i> Managed DeFi exposure</li>
+                        </ul>
+                        <a href="#customize-plan" class="btn btn-primary btn-full">Select Plan</a>
+                    </div>
+                </div>
+                
+                <div class="plan-card animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="plan-header">
+                        <h3>Personalized</h3>
+                        <div class="plan-price">Custom Strategy</div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Custom risk level</li>
+                            <li><i class="fa-solid fa-check"></i> Personalized group size</li>
+                            <li><i class="fa-solid fa-check"></i> Target interest rate</li>
+                            <li><i class="fa-solid fa-check"></i> Expected retirement amount</li>
+                            <li><i class="fa-solid fa-check"></i> Flexible allocation</li>
+                        </ul>
+                        <a href="#customize-plan" class="btn btn-primary btn-full">Customize Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <div class="section-title animate__animated animate__fadeIn">
+                <h2>Portfolio Tracking Dashboard</h2>
+                <p>Our goal is to provide real-time visibility into retirement funds with a user-friendly dashboard.</p>
+            </div>
+            
+            <div class="dashboard-preview animate__animated animate__fadeIn">
+                <div class="dashboard-tabs">
+                    <button class="tab-btn active" data-tab="portfolio">Portfolio</button>
+                    <button class="tab-btn" data-tab="earnings">Earnings</button>
+                    <button class="tab-btn" data-tab="projections">Projections</button>
+                </div>
+                
+                <div class="dashboard-content">
+                    <!-- Tab content will be dynamically loaded -->
+                    <div class="tab-content active" id="portfolio-tab">
+                        <div class="dashboard-card account-summary">
+                            <h3>Account Summary</h3>
+                            <div class="account-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Total Balance</span>
+                                    <span class="stat-value">$228,320</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Total Earnings</span>
+                                    <span class="stat-value">$28,320</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Current APY</span>
+                                    <span class="stat-value">7.8%</span>
+                                </div>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="btn btn-primary">Deposit</button>
+                                <button class="btn btn-outline">Withdraw</button>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card holdings">
+                                <h3>Holdings</h3>
+                                <div class="holdings-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Asset</th>
+                                                <th>Value</th>
+                                                <th>24h Change</th>
+                                                <th>Category</th>
+                                                <th>7-Day Performance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="asset">
+                                                    <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH">
+                                                    <span>Ethereum</span>
+                                                </td>
+                                                <td>$70,370.40</td>
+                                                <td class="positive">+0.17%</td>
+                                                <td>Crypto</td>
+                                                <td class="chart-cell">
+                                                    <img src="https://static.crypto.com/price-track/3/price-chart/7d.svg" class="chart" alt="ETH 7-day chart">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="asset">
+                                                    <img src="https://cryptologos.cc/logos/usd-coin-usdc-logo.png" alt="USDC">
+                                                    <span>USD Coin</span>
+                                                </td>
+                                                <td>$40,318.00</td>
+                                                <td class="positive">+0.01%</td>
+                                                <td>Stablecoin</td>
+                                                <td class="chart-cell">
+                                                    <img src="https://static.crypto.com/price-track/10/price-chart/7d.svg" class="chart" alt="USDC 7-day chart">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="asset">
+                                                    <img src="https://cryptologos.cc/logos/aave-aave-logo.png" alt="AAVE">
+                                                    <span>Aave</span>
+                                                </td>
+                                                <td>$37,853.20</td>
+                                                <td class="negative">-1.96%</td>
+                                                <td>DeFi</td>
+                                                <td class="chart-cell">
+                                                    <img src="https://static.crypto.com/price-track/20/price-chart/7d.svg" class="chart" alt="AAVE 7-day chart">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="asset">
+                                                    <img src="https://cryptologos.cc/logos/compound-comp-logo.png" alt="COMP">
+                                                    <span>Compound</span>
+                                                </td>
+                                                <td>$21,087.00</td>
+                                                <td class="negative">-0.98%</td>
+                                                <td>DeFi</td>
+                                                <td class="chart-cell">
+                                                    <img src="https://static.crypto.com/price-track/24/price-chart/7d.svg" class="chart" alt="COMP 7-day chart">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-card allocation">
+                                <h3>Portfolio Breakdown</h3>
+                                <div class="allocation-chart">
+                                    <!-- Placeholder for a chart -->
+                                    <div id="allocation-chart-container"></div>
+                                </div>
+                                <div class="allocation-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #4b3b7c;"></span>
+                                        <span class="legend-label">ETH (30%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #008f6e;"></span>
+                                        <span class="legend-label">Stablecoins (40%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #195759;"></span>
+                                        <span class="legend-label">RWAs (30%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="earnings-tab">
+                        <div class="dashboard-card earnings-summary">
+                            <h3>Earnings & Yield Tracking</h3>
+                            <p>Real-time display of daily, weekly, and yearly earnings from passive income sources.</p>
+                            
+                            <div class="earnings-period-selector">
+                                <button class="period-btn active" data-period="daily">Daily</button>
+                                <button class="period-btn" data-period="weekly">Weekly</button>
+                                <button class="period-btn" data-period="monthly">Monthly</button>
+                                <button class="period-btn" data-period="yearly">Yearly</button>
+                            </div>
+                            
+                            <div class="earnings-chart">
+                                <!-- Placeholder for earnings chart -->
+                                <div id="earnings-chart-container"></div>
+                            </div>
+                            
+                            <div class="alerts-section">
+                                <h4>Recent Alerts</h4>
+                                <div class="alert-item">
+                                    <i class="fa-solid fa-bell"></i>
+                                    <div class="alert-content">
+                                        <p>Portfolio rebalance recommended: Increase USDC allocation by 5%</p>
+                                        <span class="alert-time">2 hours ago</span>
+                                    </div>
+                                    <button class="btn btn-sm">Apply</button>
+                                </div>
+                                <div class="alert-item">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                    <div class="alert-content">
+                                        <p>ETH staking rewards increased to 6.2% APR</p>
+                                        <span class="alert-time">Yesterday</span>
+                                    </div>
+                                    <button class="btn btn-sm">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="projections-tab">
+                        <div class="dashboard-card projections-summary">
+                            <h3>Projected Retirement Income</h3>
+                            <p>A projection tool estimates retirement income based on current contributions and expected yield.</p>
+                            
+                            <div class="projection-details">
+                                <div class="projection-stat">
+                                    <span class="projection-label">Current Balance</span>
+                                    <span class="projection-value">$228,320</span>
+                                </div>
+                                <div class="projection-stat">
+                                    <span class="projection-label">Monthly Contribution</span>
+                                    <span class="projection-value">$1,500</span>
+                                </div>
+                                <div class="projection-stat">
+                                    <span class="projection-label">Years Until Retirement</span>
+                                    <span class="projection-value">25</span>
+                                </div>
+                                <div class="projection-stat highlight">
+                                    <span class="projection-label">Projected Balance at Retirement</span>
+                                    <span class="projection-value">$1,247,530</span>
+                                </div>
+                                <div class="projection-stat highlight">
+                                    <span class="projection-label">Monthly Income at Retirement</span>
+                                    <span class="projection-value">$6,237</span>
+                                </div>
+                            </div>
+                            
+                            <div class="projection-chart">
+                                <!-- Placeholder for projection chart -->
+                                <div id="projection-chart-container"></div>
+                            </div>
+                            
+                            <div class="projection-adjustments">
+                                <h4>Adjust Projections</h4>
+                                <div class="adjustment-controls">
+                                    <div class="control-group">
+                                        <label for="contribution-slider">Monthly Contribution</label>
+                                        <input type="range" id="contribution-slider" min="500" max="5000" value="1500" step="100">
+                                        <span class="slider-value">$1,500</span>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="retirement-slider">Years Until Retirement</label>
+                                        <input type="range" id="retirement-slider" min="5" max="40" value="25" step="1">
+                                        <span class="slider-value">25 years</span>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="return-slider">Expected Annual Return</label>
+                                        <input type="range" id="return-slider" min="3" max="15" value="7" step="0.5">
+                                        <span class="slider-value">7.0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-features">
+                <div class="feature-point animate__animated animate__fadeInUp">
+                    <div class="point-number">1</div>
+                    <div class="point-content">
+                        <h3>Portfolio Breakdown</h3>
+                        <p>Users can monitor asset allocations in real-time, adjusting based on performance trends.</p>
+                        <p class="example">Example: "30% staked in ETH, 40% in stablecoin lending, 30% in RWAs."</p>
+                    </div>
+                </div>
+                
+                <div class="feature-point animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="point-number">2</div>
+                    <div class="point-content">
+                        <h3>Earnings & Yield Tracking</h3>
+                        <p>Real-time display of daily, weekly, and yearly earnings from passive income sources.</p>
+                        <p>Users receive automated alerts when portfolio shifts are recommended.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-point animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="point-number">3</div>
+                    <div class="point-content">
+                        <h3>Projected Retirement Income</h3>
+                        <p>A projection tool estimates retirement income based on current contributions and expected yield.</p>
+                        <p class="example">Example: "If you continue staking, you will earn $6,237 per month at retirement."</p>
+                    </div>
+                </div>
+                
+                <div class="feature-point animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="point-number">4</div>
+                    <div class="point-content">
+                        <h3>Easy Fund Reallocation</h3>
+                        <p>Users can seamlessly shift funds between different strategies based on performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-title animate__animated animate__fadeIn">
+                <h2>How It Works</h2>
+                <p>Getting started with Safe Haven is simple and secure.</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step animate__animated animate__fadeInUp">
+                    <div class="step-number">1</div>
+                    <h3>Visit & Sign Up</h3>
+                    <p>Create an account on the Safe Haven platform with your email and secure password.</p>
+                </div>
+                
+                <div class="step animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="step-number">2</div>
+                    <h3>Connect Wallet</h3>
+                    <p>Connect your existing crypto wallet or create a new custodial wallet directly on our platform.</p>
+                </div>
+                
+                <div class="step animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="step-number">3</div>
+                    <h3>Fund Your Account</h3>
+                    <p>Deposit funds into your Safe Haven account to start growing your retirement savings.</p>
+                </div>
+                
+                <div class="step animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="step-number">4</div>
+                    <h3>Manage & Grow</h3>
+                    <p>Use the dashboard to track performance, participate in governance, and optimize your strategy.</p>
+                </div>
+                
+                <div class="step animate__animated animate__fadeInUp animate__delay-4s">
+                    <div class="step-number">5</div>
+                    <h3>Withdraw Flexibly</h3>
+                    <p>Access your funds with flexible withdrawal options when you're ready for retirement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="withdraw-section">
+        <div class="container">
+            <div class="section-title animate__animated animate__fadeIn">
+                <h2>Withdrawal of Funds</h2>
+                <p>Seamless and secure access to savings at all times thanks to smart contracts</p>
+            </div>
+            
+            <div class="withdraw-content">
+                <div class="withdraw-image animate__animated animate__fadeInLeft">
+                    <img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?q=80&w=2487&auto=format&fit=crop" alt="Crypto wallet" class="rounded-img">
+                </div>
+                
+                <div class="withdraw-options animate__animated animate__fadeInRight">
+                    <div class="withdraw-header">
+                        <h3>YOUR FUNDS, YOUR WAY</h3>
+                    </div>
+                    
+                    <div class="withdraw-types">
+                        <div class="withdraw-type">
+                            <div class="withdraw-icon">
+                                <i class="fa-solid fa-stopwatch"></i>
+                            </div>
+                            <div class="withdraw-details">
+                                <h4>Flexible withdrawal options</h4>
+                                <p>For on-demand access to your funds whenever you need them</p>
+                            </div>
+                        </div>
+                        
+                        <div class="withdraw-type">
+                            <div class="withdraw-icon">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <div class="withdraw-details">
+                                <h4>Structured payout plans</h4>
+                                <p>For planned retirement income with regular distributions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="withdraw-features">
+                <div class="features-grid">
+                    <div class="withdraw-feature-card animate__animated animate__fadeInUp">
+                        <div class="feature-header">
+                            <i class="fa-solid fa-bolt"></i>
+                            <h4>Instant</h4>
+                        </div>
+                        <ul>
+                            <li>Any amount, processed instantly via app (e.g., USDC, ETH)</li>
+                            <li>Gas fees apply; reduced with Layer 2 (e.g., Polygon)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="withdraw-feature-card animate__animated animate__fadeInUp animate__delay-1s">
+                        <div class="feature-header">
+                            <i class="fa-solid fa-calendar"></i>
+                            <h4>Scheduled</h4>
+                        </div>
+                        <ul>
+                            <li>Recurring transfers (e.g., monthly), configured in app</li>
+                            <li>Adjustable frequency or triggers</li>
+                            <li>Automated via smart contracts with pool integration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="withdraw-feature-card animate__animated animate__fadeInUp">
+                        <div class="feature-header">
+                            <i class="fa-solid fa-money-bill"></i>
+                            <h4>Fixed Amount</h4>
+                        </div>
+                        <ul>
+                            <li>Consistent amount (e.g., monthly) on a set schedule</li>
+                            <li>Configurable terms; optional inflation adjustments</li>
+                            <li>Funds not yet withdrawn remain invested, earning yield</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="withdraw-feature-card animate__animated animate__fadeInUp animate__delay-1s">
+                        <div class="feature-header">
+                            <i class="fa-solid fa-percent"></i>
+                            <h4>Percentage-Based</h4>
+                        </div>
+                        <ul>
+                            <li>% of balance withdrawn, recalculated periodically</li>
+                            <li>Scales with fund growth; customizable limits</li>
+                            <li>Subject to available liquidity in DeFi strategies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="warning-note animate__animated animate__fadeIn animate__delay-2s">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p>Withdrawals may vary depending on liquidity and the specific pools the DAO invests in (e.g., staking unbonding)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content animate__animated animate__fadeIn">
+                <h2>Start Planning Your Future Today</h2>
+                <p>Join thousands of users who are already growing their retirement savings with Safe Haven.</p>
+                <a href="#signup" class="btn btn-secondary animate__animated animate__pulse animate__infinite animate__slower">Create Your Wallet</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-vault fa-lg"></i>
+                        <span>Safe Haven</span>
+                    </div>
+                    <p>A decentralized retirement solution powered by blockchain technology and governed by its community.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Plans</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Governance</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Governance Forum</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Telegram</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Safe Haven. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
